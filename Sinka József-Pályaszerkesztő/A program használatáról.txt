@@ -17,6 +17,6 @@ Egyes elemek lecserélésekor fontos, hogy a barna részre kattintsunk, különb
 	Ezután a load gombra kattintva betölthető a kívánt pálya. A programba való belépéskor mindig a Test.txt fájl kerül megnyitásra.
 
 -Mentés: A jobb alsó sarokban található beviteli mezőbe a kívánt mentés nevét kell beírni kiterjesztés nélkül. Ezután a save gombra kattintva elmenthető a pálya.
-	Ha ilyen néven még nem létezett pálya, akkor létre is hozza, ellenkező esetben felülírja. A mentések a program mappáján(Labirintus szerkesztő_Data) belül a Saves mappában találhatóak. 
+	Ha ilyen néven még nem létezett pálya, akkor létre is hozza, ellenkező esetben felülírja. A mentések a program mappáján(Labirintus szerkesztő_Data) belül a Saves mappában találhatóak. A sikeres mentéshez legalább 1 kincseskamra szükséges. Ellenkező esetben nem kerül mentésre a térkép.
 
 FIGYELEM: A Saves/Test.txt fájlt és a Saves mappán kívül található fájlokat nem szabad eltávolítani.
