@@ -8,6 +8,7 @@ Egyes elemek lecserélésekor fontos, hogy a barna részre kattintsunk, különb
 
 A programból való kilépés az ALT+F4 gombok együttes lenyomásával történik.
 
+-Mozgás: A kamerát mozgatni a nyíl billentyűkkel lehet.
 
 -Csúszka: A képernyő alján, középen található csúszkával választható ki a lerakandó elem.
 
