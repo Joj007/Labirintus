@@ -1,0 +1,16 @@
+A program unity-ben készült és nem illeszkedik minden képernyőmérethez. 1810x977 széles monitoron lett tesztelve a program.
+
+
+-Csúszka: A képernyő alján, középen található csúszkával választható ki a lerakandó elem.
+
+-Csúszka megjelenítő: A képernyű bal alsó sarkában található négyzet adja a felhasználónak, hogy aktuálisan milyen labirintuselem van kijelölve.
+
+-Sorok és oszlopk számának növelése: A csúszka fölött található gombokkal lehet növelni vagy csökkenteni a sor és oszlopszámot.
+
+-Betöltés: A jobb alsó sarokban található beviteli mezőbe a kívánt mentés nevét kell beírni kiterjesztés nélkül.
+	Ezután a load gombra kattintva betölthető a kívánt pálya. A programba való belépéskor mindig a Test.txt fájl kerül megnyitásra.
+
+-Mentés: A jobb alsó sarokban található beviteli mezőbe a kívánt mentés nevét kell beírni kiterjesztés nélkül. Ezután a save gombra kattintva elmenthető a pálya.
+	Ha ilyen néven még nem létezett pálya, akkor létre is hozza, ellenkező esetben felülírja. A mentések a program mappáján(Labirintus szerkesztő_Data) belül a Saves mappában találhatóak. 
+
+FIGYELEM: A Saves/Test.txt fájlt és a Saves mappán kívül található fájlokat nem szabad eltávolítani.
