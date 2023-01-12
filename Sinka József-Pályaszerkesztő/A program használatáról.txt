@@ -6,6 +6,8 @@ A program letöltése után lehetséges, hogy a "Sinka József-Pályaszerkesztő
 
 Egyes elemek lecserélésekor fontos, hogy a barna részre kattintsunk, különben nem érzékeli a program.
 
+A programból való kilépés az ALT+F4 gombok együttes lenyomásával történik.
+
 
 -Csúszka: A képernyő alján, középen található csúszkával választható ki a lerakandó elem.
 
