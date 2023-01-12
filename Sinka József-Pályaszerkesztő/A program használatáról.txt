@@ -1,5 +1,9 @@
 A program unity-ben készült és nem illeszkedik minden képernyőmérethez. 1810x977 széles monitoron lett tesztelve a program.
 
+A programot "Sinka József-Pályaszerkesztő" mappában lévő Labirintus szerkesztő.exe fájl segítségével lehet elindítani.
+
+A program letöltése után lehetséges, hogy a "Sinka József-Pályaszerkesztő" mappában lévő UnityPlayer.dll fájl nem működik megfelelően. Ebben az esetben az email-ben csatolmányként elküldött fájllal kell helyettsíteni és felülírni.
+
 
 -Csúszka: A képernyő alján, középen található csúszkával választható ki a lerakandó elem.
 
