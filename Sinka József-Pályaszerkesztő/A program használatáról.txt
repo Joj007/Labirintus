@@ -4,6 +4,8 @@ A programot "Sinka József-Pályaszerkesztő" mappában lévő Labirintus szerke
 
 A program letöltése után lehetséges, hogy a "Sinka József-Pályaszerkesztő" mappában lévő UnityPlayer.dll fájl nem működik megfelelően. Ebben az esetben az email-ben csatolmányként elküldött fájllal kell helyettsíteni és felülírni.
 
+Egyes elemek lecserélésekor fontos, hogy a barna részre kattintsunk, különben nem érzékeli a program.
+
 
 -Csúszka: A képernyő alján, középen található csúszkával választható ki a lerakandó elem.
 
