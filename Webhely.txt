@@ -1,0 +1,2 @@
+Sajnos nem tudtam rá jönni hogy mi a gond a veboldallal. Ha firefoxban van megnyitva
+akkor működik, a többi böngészővel valamiért nem. )): 
