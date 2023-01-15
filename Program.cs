@@ -1,62 +1,36 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 
-namespace Labirintus_Projekt
+namespace labirintus_Gameplay
 {
     class Program
     {
+        static int NumberOfRooms(List<string> map)
+        {
+            int count = 0;
+            for (int i = 0; i < map.Count; i++)
+            {
+                for (int x = 0; x < map[0].Length; x++)
+                {
+                    if (map[i][x] == '█')
+                    {
+                        count++;
+                    }
+                }
+            }
+            return count;
+        }
+
+
         static List<string> CreateMap(string path)
         {
             List<string> map = new List<string>();
             map = File.ReadAllLines(path).ToList();
             return map;
         }
-        static bool IsMovementAvailable(char movementKey, int[] coordinate)
-        {
-            if (movementKey == 'w')
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        static void Movement(int[] currentPosition)
-        {
-            char input = '´';
-            do
-            {
-                ConsoleKeyInfo key = Console.ReadKey();
-                //Char keyChar = Convert.ToChar(key);
-                if (key.KeyChar == 'w' || key.KeyChar == 'a' || key.KeyChar == 's' || key.KeyChar == 'd')
-                {
-                    input = key.KeyChar;
-                    break;
-                }
-            } while (true);
 
-            if (input == 'w')
-            {
-                Console.SetCursorPosition(currentPosition[0], currentPosition[1]);
-                Console.ResetColor();
-                Console.BackgroundColor = ConsoleColor.Red;
-
-                Console.SetCursorPosition(currentPosition[0] + 1, currentPosition[1]);
-                Console.ResetColor();
-
-            }
-
-            //if (IsMovementAvailable(input))
-            //{
-            //
-            //}
-
-
-        }
 
         static void Timer(int time)
         {
@@ -66,6 +40,8 @@ namespace Labirintus_Projekt
                 System.Threading.Thread.Sleep(1000);
             }
         }
+
+
         static int[] StartingPosition(List<string> map)
         {
             DrawMap(map);
@@ -110,6 +86,8 @@ namespace Labirintus_Projekt
 
             return startingPosition;
         }
+
+
         static void DrawMap(List<string> map)
         {
 
@@ -123,11 +101,86 @@ namespace Labirintus_Projekt
             }
         }
 
+
+        static void Game()
+        {
+            List<string> map = CreateMap("C:\\Users\\Tamás\\source\\repos\\Labirintus\\map.txt");
+            DrawMap(map);
+            int left = 15;
+            int top = 3;
+
+            bool isGameGoing = true;
+
+
+            do
+            {
+                Console.SetCursorPosition(left,top);
+                ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+                switch(keyInfo.Key)
+                {
+                    case ConsoleKey.W:
+                        if (top != 0 && map[top-1][left] != '.')
+                        {
+                            Console.BackgroundColor = ConsoleColor.Green;
+
+                            top--;
+                            Console.SetCursorPosition(left, top);
+                            Console.Write(map[top][left]);
+                            Console.ResetColor();
+
+                        }
+                        break;
+
+                    case ConsoleKey.A:
+                        if (left != 0 && map[top][left-1] != '.')
+                        {
+                            Console.BackgroundColor = ConsoleColor.Green;
+                            left--;
+                            Console.SetCursorPosition(left, top);
+                            Console.Write(map[top][left]);
+                            Console.ResetColor();
+
+                        }
+                        break;
+
+                    case ConsoleKey.S:
+                        if (top != map.Count - 1 && map[top + 1][left] != '.')
+                        {
+                            Console.BackgroundColor = ConsoleColor.Green;
+
+                            top++;
+                            Console.SetCursorPosition(left, top);
+                            Console.Write(map[top][left]);
+                            Console.ResetColor();
+
+                        }
+                        break;
+
+                    case ConsoleKey.D:
+                        if (left != map[0].Length - 1 && map[top][left + 1] != '.')
+                        {
+                            Console.BackgroundColor = ConsoleColor.Green;
+                            left++;
+                            Console.SetCursorPosition(left, top);
+                            Console.Write(map[top][left]);
+                            Console.ResetColor();
+                        }
+                        break;
+
+                    case ConsoleKey.Escape:
+                        Console.SetCursorPosition(0, map.Count + 3);
+                        isGameGoing = false;
+                        break;
+                }
+
+            } while (isGameGoing);
+        }
         static void Main(string[] args)
         {
-            StartingPosition(CreateMap("path"));
-            
+            Game();
         }
 
     }
 }
+
+
