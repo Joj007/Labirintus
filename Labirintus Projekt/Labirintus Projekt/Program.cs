@@ -183,7 +183,12 @@ namespace labirintus_Gameplay
         }
         static void Main(string[] args)
         {
-            Game();
+            Game(); //a Labirintus Projekt\Labirintus Projekt\bin\Debug\netcoreapp3.1 mappába tegye a pálya txt file-ját
+            
+            
+            
+            
+            
             //List<string> map = CreateMap(Directory.GetCurrentDirectory() + "\\minta.txt");
             //DrawMap(map);
             //int[] starting = StartingPosition(map);
