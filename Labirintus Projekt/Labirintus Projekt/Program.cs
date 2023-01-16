@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -77,12 +77,18 @@ namespace labirintus_Gameplay
 
         static void Game()
         {
-            //Console.Write("Load in your map(e.g. Example.txt): ";
-            //string LoadInMap = Console.ReadLine();                            
-            //List<string> map = CreateMap(Path.GetFullPath(LoadInMap));
-            List<string> map = CreateMap("Labirintus Projekt\\minta.txt");  //adja meg a PATH-t
 
-            //Console.Clear();
+            string LoadInMap;
+            do
+            {
+                Console.Write("Load in your map(e.g. example.txt): ");
+                LoadInMap = Console.ReadLine();
+            } while (!File.Exists(LoadInMap));
+
+            var path = Directory.GetCurrentDirectory() + $"\\{LoadInMap}";
+            List<string> map = CreateMap(path);
+            Console.Clear();
+
             DrawMap(map);
             int top = StartingPosition(map)[0];
             int left = StartingPosition(map)[1];
@@ -157,7 +163,7 @@ namespace labirintus_Gameplay
 
                     case ConsoleKey.Escape:
                         Console.SetCursorPosition(0, map.Count + 3);
-                        isGameGoing = false;
+                        Environment.Exit(0);
                         break;
                 }
 
@@ -178,7 +184,17 @@ namespace labirintus_Gameplay
         static void Main(string[] args)
         {
             Game();
-            //a Game() function-be adja meg a pálya PATH-ját
+            //List<string> map = CreateMap(Directory.GetCurrentDirectory() + "\\minta.txt");
+            //DrawMap(map);
+            //int[] starting = StartingPosition(map);
+            //int SPT = starting[0];
+            //int SPL = starting[1];
+            //Console.WriteLine($"{StartingPosition(map)[0]}  {StartingPosition(map)[1]}");
+            //Console.WriteLine(map[SPT][SPL]);
+            //Console.SetCursorPosition(SPL, SPT);
+
+            //System.Threading.Thread.Sleep(5000);
+            //Console.SetCursorPosition(10, 10);
         }
 
     }
